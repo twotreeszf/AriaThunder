@@ -3,7 +3,7 @@ AriaThunder = aira2 + xunlei-lixian + yaaw
 To build a cool download system on Raspberry Pi!
 ----------
 
-Keyword: c/c++ python html/js aria2 xunlei-lixian json-rpc xml-rpc websocket yaaw pstream Raspberry-Pi
+Keyword: c/c++ python html/js aria2 xunlei-lixian json-rpc xml-rpc websocket yaaw pstream raspberrypi
 
 背景
 ----------
