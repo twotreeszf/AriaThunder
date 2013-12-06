@@ -33,8 +33,8 @@ Keyword: c/c++ python html/js aria2 xunlei-lixian json-rpc xml-rpc websocket yaa
 * https://github.com/binux/yaaw
 * http://pstreams.sourceforge.net/
 
-安装步骤
+不错，俺也要玩玩？
 ----------
 
-有时间整理
+编译、安装步骤有时间再整理:(
 
