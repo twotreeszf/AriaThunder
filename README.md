@@ -15,7 +15,7 @@ Keyword: c/c++ python html/js aria2 xunlei-lixian json-rpc xml-rpc websocket yaa
 经过
 ----------
 
-通过一番考察，整合了三个现有的东西aira2 + xunlei-lixian + yaaw，做出一个比较流程的体验：
+通过一番考察，整合了三个现有的东西aira2 + xunlei-lixian + yaaw，做出一个比较流畅用户的体验（谈不上极致^_^）：
 * 在浏览器打开yaaw控制台；
 * 在设置中保存迅雷会员帐号密码；
 * 上传任意种子，链接，开始加速下载；
