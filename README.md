@@ -4,6 +4,10 @@ AriaThunder = aira2 + xunlei-lixian + yaaw, to build a cool download system on R
 
 Keyword: c/c++ python html/js aria2 xunlei-lixian json-rpc xml-rpc websocket yaaw pstream raspberrypi
 
+![Alt text](/test/1.png)
+![Alt text](/test/2.png)
+![Alt text](/test/3.jpg)
+
 背景
 ----------
 
