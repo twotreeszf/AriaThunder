@@ -9,8 +9,8 @@ Keyword: c/c++ python html/js aria2 xunlei-lixian json-rpc xml-rpc websocket yaa
 
 * 最近参与了一些小米的智能路由项目
 * 并且之前一直对小型Linux设备开发比较感兴趣
-* 抽屉里有个树莓派买来很久了
-* 为了解决自己下片在小米盒子上看的需要
+* 抽屉里有个树莓派在睡大觉
+* 需要给老婆下片，在小米盒子上看
 * 利用业余时间开始折腾一个下片神器
 
 经过
