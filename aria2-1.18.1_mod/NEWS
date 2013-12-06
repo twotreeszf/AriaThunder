@@ -1,0 +1,202 @@
+aria2 1.18.1
+============
+
+Release Note
+------------
+
+This release fixes the percent-encoding bug which affects file name
+encodings. It adds PKCS12 support in certificate import. It also adds
+experimental internal implementation of message digest functions, ARC4
+cipher and bignum. It means that no external libraries are required to
+build BitTorrent support, but this feature is still marked as
+experimental. This release also fixes the android build with NDK r9.
+
+Changes
+-------
+
+* LibsslTLSContext: Remove weak cipher suite
+
+* AppleTLS: Enable --certificate
+
+* util::percentEncodeMini: Fix regression bug removed unsignedness
+
+  srange-based for around std::string is convenient but several
+  functions depend unsigned char for correctness and readability.
+
+* Log exception; throw error if loading private key and/or certificate
+  failed
+
+* Provide internal ARC4 implementation
+
+  Now you can build bittorrent support without without external
+  libraries, meaning you can skip libnettle, libgmp, libgcrypt, GnuTLS
+  and OpenSSL on OSX (for now).
+
+* Internal implementation of DHKeyExchange
+
+  Reusing a bignum (well, unsigned very-long) implementation I had
+  lying around for years and just cleaned up a bit and brought to
+  C++11 land.
+
+  It might not be the most performant implementation, but it shoud be
+  fast enough for our purposes and will go a long way of removing
+  gcrypt, nettle, gmp, openssl dependencies when using AppleTLS and
+  WinTLS (upcoming).
+
+* PKCS12 support in --certificate and --rpc-certificate options.
+
+* Add --disable-ssl configure option
+
+* Add internal md5 and sha1 message digests
+
+* Fix AppleMessageDigestImpl use with large data
+
+* Set old cookie's creation-time to new cookie on replacement
+
+  As described in http://tools.ietf.org/html/rfc6265#section-5.3
+
+* Fix link error with Android NDK r9
+
+  Since Android ndk r9, __set_errno is deprecated. It is now defined
+  as inline function in errno.h. The syscall assembly calls
+  __set_errno, but since libc.so does not export it, the link
+  fails. To workaround this, replace all occurrences of __set_errno
+  with a2_set_errno and define it as normal C function.
+
+
+
+aria2 1.18.0
+============
+
+Release Note
+------------
+
+This release changes the default disk cache size to 16 MiB. To change
+the default size, --with-disk-cache configure option was added.  Now
+used URIs are also saved by --save-session option. The control file is
+now always saved if --force-save is given. The ctrl-c handling on
+Mingw build was improved. The internal intl library is no longer
+supplied. From this release, C++11 compiler is required to build aria2
+executable. For gcc, at least 4.6.3 is required.
+
+Changes
+-------
+
+* Use AM subdir-objects
+
+  Doing so in AM_INIT_AUTOMAKE seems to be the most compatible way of
+  doing so.
+
+  Closes GH-120
+
+* AM_SILENT_RULES([yes]) with backwards-compatiblity
+
+  Supported since automake-1.11. There is no point in having the very
+  verbose compile stuff running about, which cannot even silenced
+  properly with `make -s` by default. Otherwise, `make V=1` or
+  `--disable-silent-rules` are your friends
+
+* Fix automake-1.14 am_aux_dir
+
+  AC_USE_SYSTEM_EXTENSIONS will cause AC_PROG_CC, which is overridden
+  by automake-1.14, which will then init (part) of automake, in
+  particular am_aux_dir expansion, which in turn relies on ac_aux-dir,
+  which is not initialized at this point, and thus: certain doom (or
+  fun, depending on your POV and mood :p)
+
+  Hence call AC_USE_SYSTEM_EXTENSIONS only after
+  AM_INIT_AUTOMAKE. This, of course, caused a lot of related macro
+  shuffling.
+
+  Tested against automake-1.10 (OSX Lion/XCode version) and
+  automake-1.14 (homebrew version)
+
+* Require external gettext for --enable-nls
+
+  And stop using the internal flavor with ./intl
+
+* Make AX_CXX_COMPILE_STDCXX_11 test for -stdlib=libc++ via std::shared_ptr
+
+  The clang shipped with OSX XCode and clangs not build enabling
+  libcpp, will default to the libstdc++ headers and lib installed on
+  the system.  In the OSX case, that libstdc++ is the one bundles with
+  gcc-4.2, which is far too old to provide all required C++11 types,
+  such as std::shared_ptr.  Hence, the C++11 check should try to
+  compile a program with a C++11 type and try -stdlib=libc++ if the
+  default lib fails to compile said program.
+
+* Make the configure check for C++11 compiler mandatory
+
+  Remove stray "dnl", so that mandatory actually works with (my)
+  autoreconf.
+
+* Always build doc/manual-src
+
+  Should sphinx-build be not available AND the man file not be prsent,
+  then just "touch" it into existence (and warn about that)
+
+* Win: Use SetConsoleCtrlHandler for SIGINT/SIGTERM
+
+* Implement a simple resource lock (threading)
+
+  In this initial implementation Locks are no-ops on platforms other
+  than Windows.
+
+* Check for sphinx-build during configure
+
+* Add --with-disk-cache configure option
+
+  Enables packagers more fine grained control over the default value
+  without having to mess with config files.
+
+  See GH-115
+
+* Change defaults: Enable 16M disk cache by default.
+
+* Always save control file if --force-save is given
+
+* Set log level DEBUG for unittests
+
+* Check that C++ compiler supports override keyword
+
+  If the compiler supports override, define CXX11_OVERRIDE as
+  override, otherwise define it as empty. Use CXX11_OVERRIDE instead
+  of override.
+
+* AppleTLS: Fix MessageDigestImpl
+
+* AppleTLS: Fix session CFRelease stuff
+
+* Use AX_CXX_COMPILE_STDCXX_11 macro to detect C++0x/C++11 support in
+  compiler
+
+* Require -std=c++11 and use std::shared_ptr instead of SharedHandle
+
+* Join URI on redirect
+
+* Send HAVE message to the peer which the piece is downloaded from
+
+  Historically, aria2 did not send HAVE message to the peer which the
+  piece is coming from, thinking it is obvious that the peer knows we
+  have the piece. But it is not obvious if one piece is download from
+  more than 1 peers (e.g., end game mode). So it is better to send
+  HAVE to all peers connected.
+
+* Improvements to --follow-torrent=false documentation.
+
+  Patch from gt
+
+* SessionSerializer: Truly unique URIs
+
+  Before, only spent uris where sanitized not to be contained within
+  remaining uris. Change this so that each uri in the
+  union(remaining,spent) get saved once at most.  The order of the
+  uris will won't be changed, with remaining uris going first followed
+  by spent uris.
+
+  Also avoid copying the uri std::strings around during dupe checking,
+  usually resulting in better performance regarding CPU and space.
+
+* Make getOption RPC method return option for stopped downloads
+
+* SessionSerializer: Save spent URIs as well as remaining ones

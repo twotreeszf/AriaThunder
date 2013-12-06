@@ -1,0 +1,643 @@
+commit 1cf03bdada27191691b2e4ce074a9b7e06577225
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-10-20
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-10-20
+
+    Update NEWS
+
+commit 95843a5fe653f90f87c6604b809329735423ad64
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-10-20
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-10-20
+
+    TimeTest: Fix testElapsed() fail occasionally
+
+commit 0d0a8a1c3511762fa5d12dda50c4660f0dd9465b
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-10-20
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-10-20
+
+    Bump up version number to 1.18.1
+
+commit 2548cd4d6e7e74d7fd8d0df86315037bea28180f
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-10-20
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-10-20
+
+    Fix missing sha1.h and md5.h in Makefile.am
+
+commit 218dc89be9b9e2d2baf9bbf46afe90d2cefe8e2b
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-10-14
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-10-20
+
+    Update doc
+
+commit a0b669a15a947563c10457db6eb730d6b5504e09
+Author:     mozillazg <opensource.mozillazg@gmail.com>
+AuthorDate: 2013-10-17
+Commit:     mozillazg <opensource.mozillazg@gmail.com>
+CommitDate: 2013-10-17
+
+    Update README.rst
+
+commit 065979cda4eab93436809d3d1a5c392be26c82c0
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-10-08
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-10-08
+
+    Remove log message "TLS else" as this function called repeatedly
+
+commit 33293bcd5af9b643b9486990033664da6f628eb7
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-10-08
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-10-08
+
+    LibsslTLSContext: Remove weak cipher suite
+
+commit 98d88ec6d55ce9e510b98ac1bf32bbeda00f25d5
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-10-07
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-10-07
+
+    Don't log "TLS Handshaking" twice or more
+
+commit c2ae77dff472a06d95c39e69a9d72d95eaaf0ef7
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-10-06
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-10-06
+
+    test: Fix stack overflow
+
+commit 3080af7370f97b088663ce3dfdcb2a3dfbdf9498
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-10-01
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-10-01
+
+    Request: Remove previousUri_
+    
+    Historically, the previousUri_ has different meaning from referer_,
+    but in the course of development, they have the same value.  This
+    change remove previousUri_ in favor of referer_.
+
+commit 667a4725e8554eb5f1f917b5012e3b0dc6c7b039
+Author:     ITriskTI <ITriskTI@gmail.com>
+AuthorDate: 2013-10-01
+Commit:     ITriskTI <ITriskTI@gmail.com>
+CommitDate: 2013-10-01
+
+    Update aria2c.rst
+
+commit 1065f9d9646398a3a479437bb1037570e7c21498
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-30
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-30
+
+    Document that AppleTLS, WinTLS does not support --ca-certitifcate
+
+commit 41bee457925e8b48f199d87c6548a89d0aa0e5f0
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-30
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-30
+
+    Document WinTLS, AppleTLS, PKCS12 for --certificate
+
+commit 3b35887827e089b78c90ebbe571d964867c59888
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-30
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-30
+
+    WinTLS: Enable --certifcate support
+
+commit 3b9a3853058daf871a312081658e572ff135dcc2
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-30
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-30
+
+    AppleTLS: Enable --certificate
+    
+    Tested against self-signed CA with nginx
+
+commit 4c84af31be3ef0c23f896e3fc88a7ec5ef2778df
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-30
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-30
+
+    WinTLS: Fix PKCS12 loading
+    
+    It appears that, contrary to most documentation, CERT_CONTEXT* is eaten
+    alive by AcquireCredentialsHandle(). Hence you cannot really reuse that.
+
+commit 50ac6afe365ad04962354780e7973122d0f48133
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-30
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-30
+
+    util.cc: Remove uselss inline static
+
+commit b772aa6a5e5ad80c1fa52b5fb881acaef571e847
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-30
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-30
+
+    util::percentEncodeMini: Fix regression bug removed unsignedness
+    
+    srange-based for around std::string is convenient but several
+    functions depend unsigned char for correctness and readability.
+
+commit 9768aa9fad671c74a382083a9e8516315de3737c
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-30
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-30
+
+    WinTLS: Document PKCS12-only support.
+
+commit 00dd83b461d03fabdc83a5c9fc4a6009acc8da4a
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-22
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-30
+
+    Implement WinTLS
+
+commit 3f1d293ed1634a6bf97262d9f1c30b47461b725b
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-29
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-29
+
+    WinMessgeDigestImpl: gcc-4.6 does not support .emplace() yet
+
+commit 40e53de90867936faaa9f21409c6d62aded7cac2
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-28
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-28
+
+    MessageDigestImpl.h: Simplify hash_info_t access
+
+commit 6f6a17bff75c7a189091bd12265d001450cde704
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-28
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-28
+
+    Randomizer: Remove unused interfaces
+
+commit 986f69e5bf3caad104bcb20a07ceaaee79182e49
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-28
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-28
+
+    SimpleRandomizer: Use std::random
+
+commit 44479c910ecc89304fccea98b0ce0bed5d3e3801
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-26
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-26
+
+    Log exception; throw error if loading private key and/or certificate failed
+
+commit 7f18494a8c1b714368e64e7abd7abb30c123a862
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-26
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-26
+
+    SimpleRandmizer: Fix certain bits generated by getRandomBytes are always 0
+    
+    This is because in Linux RAND_MAX is 2**31-1 and we used int32_t to
+    hold random number from random() and got each bytes. This means that
+    highest bit is always unset. In little endian system, every 4n-th (n
+    >=0) byte has highest bit is unset. To fix this, we just use lower 2
+    bytes of random().
+
+commit ac996737e567c1ff29afbfb00acf22a2b4d57b7b
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-26
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-26
+
+    Move OpenSSL_add_all_algorithms() to Platform::setUp()
+
+commit d7d5e8570b12871fa1c57d61ede8eb072346e95a
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-23
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-26
+
+    Include prefs.h instead of typedef PrefPtr everywhere
+
+commit 8536f13cff3175c0ca3bf21b4314c1ed508dd7d9
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-23
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-26
+
+    uri.cc: Use auto instead of adhoc typedef
+
+commit d2af91ed082db767f7b1d726e587847c28b6a16b
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-26
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-26
+
+    InternalDHKeyExchange: Remove unused dtor
+
+commit da278225c1758562cabd802453bcbd6735772f8f
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-26
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-26
+
+    InternalARC4Encryptor: Fix compiler warning and remove no use ctor/dtor
+
+commit f2a1d241c246312036cc37b49aff5f3468e63d13
+Merge: ca8ac6e c81fd8e
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-26
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-26
+
+    Merge branch 'master' into bignum-arc4
+
+commit c81fd8e194ff6dd5633071046d445e27558745bc
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-25
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-25
+
+    InternalMessageDigestImpl: Fix memory leak
+
+commit 7dc5567cada8fb497af92d673fca78bd57b83b9b
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-25
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-25
+
+    InternalMessageDigestImpl: Code cleanup
+
+commit 77b7747ca8b6fdb44a5c5143ac3110164b65afc9
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-25
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-25
+
+    Ensure that Commands are cleaned up before RequestGroupMan is deleted
+
+commit ca8ac6e7d378814b376e2f6c57691d4ec41d5de8
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-25
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-25
+
+    bignum.h: Fix compile error
+
+commit 6198b607e954cbcfca61fa89fc547d473ccf4c09
+Merge: 99f170b e3e4ff7
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-25
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-25
+
+    Merge branch 'master' into bignum-arc4
+
+commit e3e4ff700a4ebf629f546c2379859b4181aed864
+Merge: 86c61fc cf5b049
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-25
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-25
+
+    Merge branch 'master' into random
+
+commit cf5b049999f19f62d50e426516f8249388e4200b
+Merge: 450677f 5787b1e
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-25
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-25
+
+    Merge branch 'patch-2' of https://github.com/ITriskTI/aria2 into ITriskTI-patch-2
+
+commit 450677f2bbf1bd6ce2672930143d013b8c32e2cb
+Author:     Nils Maier <testnutzer123@gmail.com>
+AuthorDate: 2013-09-25
+Commit:     Nils Maier <testnutzer123@gmail.com>
+CommitDate: 2013-09-25
+
+    Mention --without-appletls for checksumming
+
+commit ede8ee7fe8b22973ce6c0f8a24107c847c92ff28
+Author:     Nils Maier <testnutzer123@gmail.com>
+AuthorDate: 2013-09-25
+Commit:     Nils Maier <testnutzer123@gmail.com>
+CommitDate: 2013-09-25
+
+    Add notes about AppleTLS and -MD
+
+commit f2137eb784b9e8161b769327102848dce016dd27
+Author:     ITriskTI <ITriskTI@gmail.com>
+AuthorDate: 2013-09-25
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-25
+
+    Fixed a typo in the English manual
+    
+    Closes #133
+
+commit 5787b1e1615e91814fd762d78de527f018c18482
+Author:     ITriskTI <ITriskTI@gmail.com>
+AuthorDate: 2013-09-24
+Commit:     ITriskTI <ITriskTI@gmail.com>
+CommitDate: 2013-09-24
+
+    Update aria2c.rst
+
+commit 99f170b8888d806204c17a211c189db406147d6b
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-24
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-24
+
+    Provide internal ARC4 implementation
+    
+    Now you can build bittorrent support without without external
+    libraries, meaning you can skip libnettle, libgmp, libgcrypt, GnuTLS and
+    OpenSSL on OSX (for now).
+
+commit e854463b2d78fe9ce107e024e5e07623ff93d838
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-24
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-24
+
+    Internal implementation of DHKeyExchange
+    
+    Reusing a bignum (well, unsigned very-long) implementation I had lying
+    around for years and just cleaned up a bit and brought to C++11 land.
+    
+    It might not be the most performant implementation, but it shoud be fast
+    enough for our purposes and will go a long way of removing gcrypt,
+    nettle, gmp, openssl dependencies when using AppleTLS and WinTLS
+    (upcoming).
+
+commit 86c61fcf5b56ede1f30d38ae856634b7913b80e7
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-23
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-24
+
+    Make generateRandomBytes less biased.
+
+commit 213de910fdcdec08c96670bfaa617aef7ca4c28d
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-22
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-24
+
+    Add myself to AUTHORS
+
+commit e5644a718802c9efc0670e3f72c7c8b92098e760
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-24
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-24
+
+    Revert OptionHandlerFactory changes
+
+commit d1ae9f87fd97247c6ee46622a3a78836a359381b
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-24
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-24
+
+    using to typedef to make gcc-4.6 happy
+
+commit 4a1d1869626c63bc1b999a0d755b140f3ce21803
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-24
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-24
+
+    Better error messages when PKCS12 import fails
+
+commit 063451f0c950dade26e9eacc19f83458692d48d1
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-23
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-23
+
+    TLS: Minor code cleanups
+
+commit d560bf0e6fb12e4908140a577d5d8b574baa9dc4
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-23
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-23
+
+    TLS: Fix dangling str() pointers
+
+commit 2f1f45bcc58c6b3a4dc050f3e3d9676c82b80e47
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-22
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-22
+
+    Document PKCS12 availability
+
+commit 37f9c668ff67a417ac5e90966d73d170c651d3fe
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-22
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-22
+
+    Teach GnuTLS backend to load .p12 files
+
+commit f7b0fbbf532bdce896b1f2a1bdf3bdd0acdb88e6
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-22
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-22
+
+    Teach Libssl backend to load .p12 files
+
+commit 08e2e412dc562513d48900c071707a3cccb9c22f
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-20
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-20
+
+    Add some md5 tests
+
+commit 7cb69c4d9e0a02fa07735004563612566edb8d14
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-20
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-20
+
+    Add --disable-ssl configure option
+
+commit 38bdea4e069574c26751627039b67fc53d7b240c
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-20
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-20
+
+    Add internal md5 and sha1 message digests
+
+commit a1deb0e9f1910aaed8f0194ebd1173cd9574231a
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-20
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-20
+
+    Only use AppleMessageDigest when using AppleTLS
+
+commit fa30fe4b15dc10d5ac278534da54e63951a099e7
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-20
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-20
+
+    One MessageDigestImpl.h to rule them all.
+
+commit a4e29303efe846bb891e8b146bcf5e12c8c338ce
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-20
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-20
+
+    WinTLS: Implement messsage digest using the Cryptography Provider
+
+commit b678bc5e10462177777a34ba41ee226838decd1c
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-20
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-20
+
+    Fix AppleMessageDigestImpl use with large data
+
+commit 7738063100e4e404791e150f35ba43ab133cbb55
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-20
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-20
+
+    AppleTLS: Remove unused variables
+
+commit 3b9988251f88eabb426aeadb79b7c2bfda27e9a9
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-19
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-20
+
+    clang-modernize -add-override on headers
+
+commit e2700f50a5d8da1596cefccc01d70aa4696e3f4a
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-09-15
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-20
+
+    Code cleanup in Http*
+
+commit 29d569eef98cdcabe52c365e75ca4da2174d8bf0
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-08-25
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-20
+
+    Cleanup RequestGroup code a bit
+
+commit 3590077d5c43d492b3e357d1a50afca4a7d1cfcf
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-08-25
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-20
+
+    More auto-converts by cpp11-migrate
+
+commit a76eeb2b8106dd725097750c3ee4958e505e3c85
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-08-25
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-19
+
+    Introduce PrefPtr typedef
+
+commit 8e6e46dfcfdd269538e6c3070e6eea4b624d74fe
+Author:     Nils Maier <maierman@web.de>
+AuthorDate: 2013-08-25
+Commit:     Nils Maier <maierman@web.de>
+CommitDate: 2013-09-19
+
+    More code cleanups
+
+commit 9e7579b475e322ec86ff986e3371fea3fd5c857e
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-20
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-20
+
+    Set old cookie's creation-time to new cookie on replacement
+    
+    As described in http://tools.ietf.org/html/rfc6265#section-5.3
+
+commit c6eb9701731c8edf5b8b1525cef12014e7cd8ad6
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-18
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-18
+
+    Update README.rst
+
+commit e3a41a51dab04d346db6d64bd202aa72cdff80c5
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-18
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-18
+
+    Fix link error with Android NDK r9
+    
+    Since Android ndk r9, __set_errno is deprecated. It is now defined as
+    inline function in errno.h. The syscall assembly calls __set_errno,
+    but since libc.so does not export it, the link fails. To workaround
+    this, replace all occurrences of __set_errno with a2_set_errno and
+    define it as normal C function.
+
+commit fa09dc9115c4d34da6c5797287ee2ba61d6f162e
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-17
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-17
+
+    Clean up if defined style
+
+commit 58f35a07a521e51e8fb09013af17b4689b09fd34
+Author:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+AuthorDate: 2013-09-14
+Commit:     Tatsuhiro Tsujikawa <tatsuhiro.t@gmail.com>
+CommitDate: 2013-09-14
+
+    Update .gitignore
