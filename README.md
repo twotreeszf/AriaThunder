@@ -20,7 +20,7 @@ Keyword: c/c++ python html/js aria2 xunlei-lixian json-rpc xml-rpc websocket yaa
 * 在设置中保存迅雷会员帐号密码
 * 上传任意种子，链接，尝试离线加速下载
 * 如果离线加速失败，走原始下载
-* Bt任务加速成功，会转换成一堆Http任务
+* Bt任务加速成功，会转换成一堆Http任务，目录结构保持不变
 
 没时间科普了，在此感谢以下原作者们，你们的代码很Cool!很Nice！请原谅我做的修改:)
 
