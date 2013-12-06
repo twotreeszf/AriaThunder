@@ -1,4 +1,4 @@
-AriaThunder = aira2 + xunlei-lixian + yaaw \nTo build a cool download system on Raspberry Pi!
+AriaThunder = aira2 + xunlei-lixian + yaaw, to build a cool download system on Raspberry Pi!
 ----------
 
 
